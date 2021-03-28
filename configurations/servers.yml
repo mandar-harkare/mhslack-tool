@@ -1,0 +1,8 @@
+---
+servers:
+  - "34.227.11.146"
+  - "54.221.53.47"
+
+commands:
+  - "rm -rf /var/www/html/index.html"
+  - "mv /tmp/index.php /var/www/html/"

@@ -1,0 +1,7 @@
+---
+start:
+  - "apache2"
+stop:
+  - "apache2"
+restart:
+  - "apache2"

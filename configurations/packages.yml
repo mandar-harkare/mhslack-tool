@@ -1,0 +1,6 @@
+---
+add:
+  - "apache2"
+  - "libapache2-mod-php"
+remove:
+  - "apache2"
