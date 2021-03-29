@@ -8,8 +8,16 @@ from scp import SCPClient
 ssh = paramiko.SSHClient()
 
 def getYMLContents(filename=''):
-    with open(r'./configurations/'+filename+'.yml') as file:
-        return yaml.full_load(file)
+    try:
+        with open(r'./configurations/'+filename+'.yml') as file:
+            return yaml.full_load(file)
+    except Exception as e:
+        text = """
+        There was error in reading yml file.
+        """
+        text += str(e)
+        print (str(text))
+        sys.exit(2)
 
 
 def getServers():
@@ -171,7 +179,12 @@ def deployFile(servers=[]):
         
         # SCPCLient takes a paramiko transport as an argument
         scp = SCPClient(ssh.get_transport())
-        scp.put('./www/index.php', '/tmp/index.php')
+        scp.put('./www/*.php', '/tmp/')
+
+
+def version():
+    print ('mhslack version 0.0.1')
+
 
 def configure():
     deployFile()
@@ -195,8 +208,7 @@ def help():
 
 def main(argv):
     try:
-        print('Hello World')
-        print (argv[0])
+        print ('Executing command: ' + argv[0])
         # result = getattr(argv[0], 'bar')()
         return eval(argv[0] + "()")
     except Exception as e:

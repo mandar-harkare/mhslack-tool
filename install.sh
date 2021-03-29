@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt-get install python3.8
 sudo apt-get install python3-pip
 pip3 --version
-pip3 install -r requirements.txt
+pip3 install -r ./tool/requirement.txt
 [ -d $dir ] || sudo mkdir $dir
 sudo cp ./tool/mhslack* $dir/
 sudo chmod 0744 $dir/mhslack.*

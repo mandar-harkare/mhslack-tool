@@ -5,4 +5,4 @@ servers:
 
 commands:
   - "rm -rf /var/www/html/index.html"
-  - "mv /tmp/index.php /var/www/html/"
+  - "mv /tmp/*.php /var/www/html/"
