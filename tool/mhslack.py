@@ -179,7 +179,7 @@ def deployFile(servers=[]):
         
         # SCPCLient takes a paramiko transport as an argument
         scp = SCPClient(ssh.get_transport())
-        scp.put('./www/*.php', '/tmp/')
+        scp.put('./www/index.php', '/tmp/')
 
 
 def version():
