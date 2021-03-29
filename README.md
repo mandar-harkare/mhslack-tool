@@ -26,7 +26,7 @@
 ## About The Tool
 
 This tool is developed as an assignment, which can be used to configure two EC2 instances only.
-The tool, once installed, uses *.yml files for the configuration purpose. Detailes can be found in 'Directory Structure'
+The tool, once installed, uses *.yml files for the configuration purpose. Details can be found in 'Directory Structure'
 
 ### Built With
 
